@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             passwordEt.setError("Enter your password");
             return;
         }
-        progressDialog.setMessage("Please wait yo");
+        progressDialog.setMessage("Please wait ");
         progressDialog.show();
         progressDialog.setCanceledOnTouchOutside(false);
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
