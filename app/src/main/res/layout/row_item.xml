@@ -32,8 +32,14 @@ android:orientation="vertical">
     android:layout_height="wrap_content"
     android:text="Description"
     android:textSize="30dp"
-     android:textColor="#FFEB3B"
-    />
+     android:textColor="#FFEB3B" />
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="0dp"
+
+            />
 
         </LinearLayout>
 

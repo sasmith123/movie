@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         Account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,SignUpActivity.class);
+                Intent intent=new Intent(MainActivity.this,mainclassformainrecyclerview.class);
                 startActivity(intent);
                 finish();
             }
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this,"Login Successfully",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Login Success",Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(MainActivity.this,DashboardActivity.class);
                     startActivity(intent);
                     finish();

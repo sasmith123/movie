@@ -30,7 +30,7 @@ public class homepage extends AppCompatActivity {
     private static final String URL_DATA ="https://api.themoviedb.org/3/movie/popular?api_key=4dc0b4988b87a649ec57904fdaed2a9d&language=en-US&page=1";
      RecyclerView recyclerView;
      RecyclerView.Adapter adapter;
-     private List<row_item> listitems;
+     public List<row_item> listitems;
      public Button logout1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,9 @@ public class homepage extends AppCompatActivity {
                     JSONObject o=array.getJSONObject(i);
                     row_item item =new row_item(o.getString("original_title"),
                             o.getString("vote_average"),
-                            o.getString("poster_path") );
+                            o.getString("poster_path"),
+                            o.getString("overview"),
+                            o.getString("release_date"));
                     listitems.add(item);
                     }
                     adapter =new RecyclerAdapter(listitems,getApplicationContext() );
